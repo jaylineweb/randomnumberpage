@@ -18,7 +18,6 @@ let gameOver = false;
 let chanceArea = document.getElementById('chance-area');
 let history = [];
 
-//console.log(playButton)
 playButton.addEventListener('click',play);
 resetButton.addEventListener('click',reset);
 userInput.addEventListener('focus',function(){
@@ -43,7 +42,6 @@ function play(){
         return;
     }
 
-    //console.log(userValue);
     chances -- ;
     chanceArea.textContent = `남은 기회:${chances}번`;
     console.log('chance',chances);
@@ -74,10 +72,8 @@ function play(){
     }
 }
 function reset(){
-    //user-input 창이 깨끗하게 정리되고
     userInput.value = '';
 
-    //새로운 번호가 생성되고
     pickRandomNum();
 
     resultArea.textContent = '결과값이 여기 나옵니다!';
